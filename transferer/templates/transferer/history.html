@@ -1,0 +1,32 @@
+{% extends 'transferer/base.html' %}
+
+{% block title %}
+    <title>History Page!</title>
+{% endblock %}
+
+{% block content %}
+    <div class="table_card">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Amount</th>
+                    <th>Converted amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for trans in transactions %}
+                    <tr>
+                        <td>{{ trans.date|date:"H:i Y-D-M"}}</td>
+                        <td>{{ trans.fromTransfer}}</td>
+                        <td>{{ trans.transferTo}}</td>
+                        <td>{{ trans.amount|floatformat:0}} {{ a.from_money }}</td>
+                        <td>{{ trans.transfered_result|floatformat:0 }} {{ a.to_money }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

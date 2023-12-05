@@ -1,0 +1,109 @@
+{% extends 'transferer/base.html' %}
+
+{% block heading %}
+    <title>Transfer Page!</title>
+{% endblock %}
+
+{% block content %}
+    <h1 class="header">Currency Converter</h1>
+    <div class="card">
+        <form method="POST" action="{% url 'transaction' %}" class="container">
+            {% csrf_token %}
+            <h2 class="exchange_header">Exchange Rate</h2>
+            <h3 class="total">{{ result|floatformat:1 }} {{ transferTo }}</h3>
+            <section class="fir">
+                <div class="form-group  ">
+                    <label for="sum" class="form_head">Amount:</label>
+                    <input type="number" id="sum" name="amount" class="form-control">
+                </div>
+            </section>
+            <div class="card_center">
+                <section class="sec">
+                    <div class="sec-half">
+                        <label for="" class="form_head">From:</label>
+                        <select name="fromTransfer" id="from_money" class="form-select">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="JPY">JPY</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="UZS">UZS</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CNY">CNY</option>
+                            <option value="SEK">SEK</option>
+                            <option value="UZS">UZS</option>
+                            <option value="NZD">NZD</option>
+                            <option value="NOK">NOK</option>
+                            <option value="INR">INR</option>
+                            <option value="BRL">BRL</option>
+                            <option value="ZAR">ZAR</option>
+                            <option value="RUB">RUB</option>
+                            <option value="HKD">HKD</option>
+                            <option value="SGD">SGD</option>
+                            <option value="TRY">TRY</option>
+                            <option value="MXN">MXN</option>
+                            <option value="PLN">PLN</option>
+                            <option value="THB">THB</option>
+                            <option value="IDR">IDR</option>
+                            <option value="MYR">MYR</option>
+                            <option value="PHP">PHP</option>
+                            <option value="DKK">DKK</option>
+                            <option value="HUF">HUF</option>
+                            <option value="CZK">CZK</option>
+                            <option value="ILS">ILS</option>
+                            <option value="KRW">KRW</option>
+                            <option value="ARS">ARS</option>
+                            <option value="CLP">CLP</option>
+                        </select>
+                    </div>
+                    <i class="fa-solid fa-arrow-right-arrow-left icon_exchange"></i>
+                    <div class="sec-half">
+                        <label for="to_money" class="form_head">To:</label>
+                        <select name="transferTo" id="to_money " class="form-select">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="JPY">JPY</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CNY">CNY</option>
+                            <option value="SEK">SEK</option>
+                            <option value="UZS">UZS</option>
+                            <option value="NZD">NZD</option>
+                            <option value="NOK">NOK</option>
+                            <option value="INR">INR</option>
+                            <option value="BRL">BRL</option>
+                            <option value="ZAR">ZAR</option>
+                            <option value="RUB">RUB</option>
+                            <option value="HKD">HKD</option>
+                            <option value="SGD">SGD</option>
+                            <option value="TRY">TRY</option>
+                            <option value="MXN">MXN</option>
+                            <option value="PLN">PLN</option>
+                            <option value="THB">THB</option>
+                            <option value="IDR">IDR</option>
+                            <option value="MYR">MYR</option>
+                            <option value="PHP">PHP</option>
+                            <option value="DKK">DKK</option>
+                            <option value="HUF">HUF</option>
+                            <option value="CZK">CZK</option>
+                            <option value="ILS">ILS</option>
+                            <option value="KRW">KRW</option>
+                            <option value="ARS">ARS</option>
+                            <option value="CLP">CLP</option>
+                        </select>
+                    </div>
+                </section>
+            </div>
+            <div class="card_center">
+                <div class="main_fir">
+                    <button type="submit" class="btn btn-outline-primary convert-btn">CONVERT</button>
+                </div>
+            </div>
+            <a href="{% url 'transaction_history' %}" class="btn btn-primary">History</a>
+        </form>
+      </div>
+
+{% endblock %}

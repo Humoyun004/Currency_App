@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 20px auto;
+  text-align: center;
+  font-family: 'Ephesis', cursive;
+  color: lightcoral;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  width: 800px;
+  box-shadow: 0 0 10px 1px rgb(162, 162, 162);
+  border-radius: 23px;
+  padding: 20px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.exchange_header {
+  text-align: center;
+  font-family: 'Ephesis', cursive;
+  color: lightcoral;
+}
+
+.form_head {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  color: darkgray;
+}
+
+.total {
+  margin: 5px auto;
+  text-align: center;
+  font-size: 35px;
+}
+
+.card_center {
+  width: 700px;
+}
+
+.sec {
+  margin: 30px auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.main_fir {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.convert-btn {
+  margin: 30px auto;
+  display: flex;
+}
+
+.icon_exchange {
+  margin: 30px auto;
+}
+
+
+.table_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+  width: 80%;
+  margin: 70px auto;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
+}
+
+
+th, td {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/*Home Page */
+.typing-text {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: pre-wrap;
+  margin: 0 auto;
+  font-size: 54px;
+  animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.home_header {
+    font-family: 'Dancing Script', cursive;
+    color: lightcoral;
+    font-size: 54px;
+}
+
+
+
+
